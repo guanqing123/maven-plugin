@@ -11,6 +11,7 @@
     <modules>
         <module>demo1-maven-plugin</module>
         <module>demo1-maven-plugin-test</module>
+        <module>demo1-maven-plugin-run</module>
     </modules>
 
 
