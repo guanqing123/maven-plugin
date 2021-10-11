@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.javacode2018</groupId>
+    <artifactId>demo1-maven-plugin-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.javacode2018</groupId>
+                <artifactId>demo1-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>demo1 plugin test</id>
+                        <phase>pre-clean</phase>
+                        <goals>
+                            <goal>demo1</goal>
+                        </goals>
+                        <configuration>
+                            <myBoolean>true</myBoolean>
+                            <myInteger>30</myInteger>
+                            <myFile>${project.basedir}</myFile>
+                            <myColor>BLUE</myColor>
+                            <myArray>
+                                <array>maven</array>
+                                <array>spring</array>
+                                <array>mybatis</array>
+                                <array>springboot</array>
+                                <array>springcloud</array>
+                            </myArray>
+                            <myList>
+                                <list>30</list>
+                                <list>35</list>
+                            </myList>
+                            <myMap>
+                                <name>路人甲Java</name>
+                                <age>30</age>
+                            </myMap>
+                            <myProperties>
+                                <property>
+                                    <name>name</name>
+                                    <value>javacode2018</value>
+                                </property>
+                                <property>
+                                    <name>age</name>
+                                    <value>30</value>
+                                </property>
+                            </myProperties>
+                            <person>
+                                <name>路人甲Java</name>
+                                <age>32</age>
+                            </person>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
